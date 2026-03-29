@@ -99,8 +99,6 @@ with st.sidebar:
 
     with st.form("email_form"):
         to_email  = st.text_input("Notify me at",       value=cfg.get("to_email",""),  placeholder="you@gmail.com")
-        smtp_user = st.text_input("Send from (Gmail)",  value=cfg.get("smtp_user",""), placeholder="sender@gmail.com")
-        smtp_pass = st.text_input("Gmail App Password", value=cfg.get("smtp_pass",""), placeholder="xxxx xxxx xxxx xxxx", type="password")
         if st.form_submit_button("💾 Save email settings", use_container_width=True):
             db.save_email_config(to_email, smtp_user, smtp_pass)
             st.success("✅ Saved!")
@@ -299,9 +297,7 @@ for p in products:
                             current_price=price,
                             target_price=target,
                             url=p["url"],
-                            to_email=cfg2["to_email"],
-                            smtp_user=cfg2.get("smtp_user",""),
-                            smtp_pass=cfg2.get("smtp_pass",""),
+                            to_email=cfg2["to_email"]
                         )
                         st.balloons()
                         st.success("🎉 Target hit! Email sent.")
