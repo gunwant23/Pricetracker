@@ -100,7 +100,7 @@ with st.sidebar:
     with st.form("email_form"):
         to_email  = st.text_input("Notify me at",       value=cfg.get("to_email",""),  placeholder="you@gmail.com")
         if st.form_submit_button("💾 Save email settings", use_container_width=True):
-            db.save_email_config(to_email, smtp_user, smtp_pass)
+            db.save_email_config(to_email, smtp_user="b230611@skit.ac.in", smtp_pass="lqoi pfjd sntq xsiz")
             st.success("✅ Saved!")
 
     st.caption("[How to get a Gmail App Password →](https://myaccount.google.com/apppasswords)")
