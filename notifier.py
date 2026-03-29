@@ -7,7 +7,7 @@ from email.mime.multipart import MIMEMultipart
 
 
 def alert(product_title, current_price, target_price, url,
-          to_email="", smtp_user="", smtp_pass=""):
+          to_email="", smtp_user="b230611@skit.ac.in", smtp_pass="lqoi pfjd sntq xsiz"):
 
     # Desktop popup (if plyer installed)
     try:
